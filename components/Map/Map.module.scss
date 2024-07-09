@@ -1,0 +1,20 @@
+.map {
+    width: 100%;
+    height: auto;
+  
+    &__mask {
+      fill: #070707;
+      stroke: #1B1B1B;
+      stroke-width: 1;
+      transition: fill 0.3s ease, stroke 0.3s ease;
+      cursor: pointer;
+  
+      &.is_active,
+      &:hover {
+        fill: #1B1B1B;
+        stroke: #070707;
+      }
+    }
+  }
+  
+  
