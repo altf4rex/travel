@@ -1,0 +1,8 @@
+@import './_variables';
+
+@mixin heading-styles($size, $line-height, $weight) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    color: $primary-text-color;
+  }

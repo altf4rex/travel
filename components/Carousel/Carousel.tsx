@@ -2,6 +2,7 @@
 import React, { useState, useEffect  } from 'react';
 import { destinations } from "../../data";
 import styles from './Carousel.module.scss';
+import Link from 'next/link';
 
 // Unhandled Runtime Error
 // TypeError: Cannot read properties of null (reading 'removeChild')
@@ -17,14 +18,13 @@ export type DestinationsCartProps = {
   region: string;
 };
 
-
 interface CarouselProps {
   activeRegion: string;
   onRegionChange: (region: string) => void;
 }
 
 const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(6);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
@@ -34,13 +34,15 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
     setCurrentIndex((prevIndex) => (prevIndex - 1 + destinations.length) % destinations.length);
   };
 
+  // Update region when currentIndex changes
   useEffect(() => {
     onRegionChange(destinations[currentIndex].region);
-  }, [currentIndex, onRegionChange]);
+  }, [currentIndex]);
 
+  // Update currentIndex when activeRegion changes
   useEffect(() => {
     const activeIndex = destinations.findIndex(dest => dest.region === activeRegion);
-    if (activeIndex !== -1) {
+    if (activeIndex !== -1 && activeIndex !== currentIndex) {
       setCurrentIndex(activeIndex);
     }
   }, [activeRegion]);
@@ -52,7 +54,8 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
         {destinations.map((item, index) => {
           const position = index - currentIndex;
           return (
-            <div
+            <Link
+            href={item.link}
               key={item.id}
               className={`${styles.carouselItem} ${index === currentIndex ? styles.active : ''}`}
               style={{
@@ -64,7 +67,7 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
             >
               <img src={item.img} alt={item.name} className={styles.carouselImage} />
               {index === currentIndex && <h3>{item.name}</h3>}
-            </div>
+            </Link>
           );
         })}
       </div>

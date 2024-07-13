@@ -1,3 +1,58 @@
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-stack: 'Helvetica Neue', sans-serif;
+// Background Colors 
+$primary-bg-color: #000000;
+$secondary-bg-color: #050505;
+
+// Text Colors
+$primary-text-color: #E4EEEC;
+$secondary-text-color: #B2B2B2;
+
+// Button Colors
+$primary-button-bg-color: transparent;
+$secondary-button-bg-color: #D7092E;
+$button-text-color: $primary-text-color;
+$button-hover-bg-color: rgba(255, 255, 255, 0.1); 
+$button-hover-text-color: darken($primary-text-color, 10%);
+$button-active-bg-color: rgba(255, 255, 255, 0.2); 
+$button-active-text-color: lighten($primary-text-color, 10%);
+$button-focus-border-color: lighten(#D7092E, 10%);
+
+// Border Colors
+$primary-border-color: #D7092E;
+$secondary-border-color: #3E3E3E;
+$primary-border-hover-color: darken($primary-border-color, 10%);
+$secondary-border-hover-color: darken($secondary-border-color, 10%);
+
+// Font Variables
+$font-stack: "Nunito", sans-serif; 
+$base-font-size: 16px;
+
+// Font Sizes
+$h1-font-size: 2.5rem; // 40px
+$h2-font-size: 2rem; // 32px
+$h3-font-size: 1.75rem; // 28px
+$h4-font-size: 1.5rem; // 24px
+$h5-font-size: 1.25rem; // 20px
+$h6-font-size: 1rem; // 16px
+$body-font-size: 1rem; // 16px
+$small-font-size: 0.875rem; // 14px
+
+// Line Heights
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Font Weights
+$base-font-weight: 400;
+$heading-font-weight: 700;
+
+// Spacing Variables
+$spacing-unit: 1rem; // 16px
+$small-spacing: $spacing-unit / 2;
+$medium-spacing: $spacing-unit;
+$large-spacing: $spacing-unit * 2;
+
+// Colors
+// $body-text-color: #333;
+// $heading-text-color: #111;
+// $link-color: $primary-color;
+// $link-hover-color: darken($primary-color, 10%);
+

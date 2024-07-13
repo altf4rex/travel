@@ -1,0 +1,15 @@
+.map {
+  width: 100%;
+  height: auto;
+}
+.map__mask {
+  fill: #070707;
+  stroke: #1B1B1B;
+  stroke-width: 1;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+  cursor: pointer;
+}
+.map__mask.is_active, .map__mask:hover {
+  fill: #1B1B1B;
+  stroke: #070707;
+}/*# sourceMappingURL=Map.module.css.map */

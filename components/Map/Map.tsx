@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Map.module.scss';
+import Link from 'next/link';
 
 interface MapProps {
   activeRegion: string;
@@ -137,15 +138,105 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
 
   
   {/* <!-- transparent region overlays for hover effect --> */}
-  <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'okinawa' ? styles.is_active : ''}`} data-id="okinawa" width="94.5" height="85.65" transform="translate(214.3 250.7)" xlinkHref="#okinawa" onMouseEnter={() => onRegionHover('okinawa')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kyushu' ? styles.is_active : ''}`} data-id="kyushu" width="61.2" height="92.87" transform="translate(0 245.3)" xlinkHref="#kyushu" onMouseEnter={() => onRegionHover('kyushu')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'shikoku' ? styles.is_active : ''}`} data-id="shikoku" width="48.3" height="38.45" transform="translate(60.1 249.2)" xlinkHref="#shikoku" onMouseEnter={() => onRegionHover('shikoku')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chugoku' ? styles.is_active : ''}`} data-id="chugoku" width="63.6" height="54.85" transform="translate(40.6 210.8)" xlinkHref="#chugoku" onMouseEnter={() => onRegionHover('chugoku')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kansai' ? styles.is_active : ''}`} data-id="kansai" width="46.4" height="48.6" transform="translate(100.1 223.7)" xlinkHref="#kansai" onMouseEnter={() => onRegionHover('kansai')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chubu' ? styles.is_active : ''}`} data-id="chubu" width="78" height="84.81" transform="translate(121.1 164.4)" xlinkHref="#chubu" onMouseEnter={() => onRegionHover('chubu')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kanto' ? styles.is_active : ''}`} data-id="kanto" width="43.2" height="47.88" transform="translate(173 195.1)" xlinkHref="#kanto" onMouseEnter={() => onRegionHover('kanto')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'tohoku' ? styles.is_active : ''}`} data-id="tohoku" width="50.8" height="106.14" transform="translate(187.4 96)" xlinkHref="#tohoku" onMouseEnter={() => onRegionHover('tohoku')}></use>
-      <use className={`${styles.map} ${styles.map__mask} ${activeRegion === 'hokkaido' ? styles.is_active : ''}`} data-id="hokkaido" width="112.8" height="98.47" transform="translate(192.6)" xlinkHref="#hokkaido" onMouseEnter={() => onRegionHover('hokkaido')}></use>
+  <Link href="/okinawa">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'okinawa' ? styles.is_active : ''}`}
+        data-id="okinawa"
+        width="94.5"
+        height="85.65"
+        transform="translate(214.3 250.7)"
+        xlinkHref="#okinawa"
+        onMouseEnter={() => onRegionHover('okinawa')}
+      ></use>
+    </Link>
+    <Link href="/kyushu">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kyushu' ? styles.is_active : ''}`}
+        data-id="kyushu"
+        width="61.2"
+        height="92.87"
+        transform="translate(0 245.3)"
+        xlinkHref="#kyushu"
+        onMouseEnter={() => onRegionHover('kyushu')}
+      ></use>
+    </Link>
+    <Link href="/shikoku">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'shikoku' ? styles.is_active : ''}`}
+        data-id="shikoku"
+        width="48.3"
+        height="38.45"
+        transform="translate(60.1 249.2)"
+        xlinkHref="#shikoku"
+        onMouseEnter={() => onRegionHover('shikoku')}
+      ></use>
+    </Link>
+    <Link href="/chugoku">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chugoku' ? styles.is_active : ''}`}
+        data-id="chugoku"
+        width="63.6"
+        height="54.85"
+        transform="translate(40.6 210.8)"
+        xlinkHref="#chugoku"
+        onMouseEnter={() => onRegionHover('chugoku')}
+      ></use>
+    </Link>
+    <Link href="/kansai">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kansai' ? styles.is_active : ''}`}
+        data-id="kansai"
+        width="46.4"
+        height="48.6"
+        transform="translate(100.1 223.7)"
+        xlinkHref="#kansai"
+        onMouseEnter={() => onRegionHover('kansai')}
+      ></use>
+    </Link>
+    <Link href="/chubu">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chubu' ? styles.is_active : ''}`}
+        data-id="chubu"
+        width="78"
+        height="84.81"
+        transform="translate(121.1 164.4)"
+        xlinkHref="#chubu"
+        onMouseEnter={() => onRegionHover('chubu')}
+      ></use>
+    </Link>
+    <Link href="/kanto">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kanto' ? styles.is_active : ''}`}
+        data-id="kanto"
+        width="43.2"
+        height="47.88"
+        transform="translate(173 195.1)"
+        xlinkHref="#kanto"
+        onMouseEnter={() => onRegionHover('kanto')}
+      ></use>
+    </Link>
+    <Link href="/tohoku">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'tohoku' ? styles.is_active : ''}`}
+        data-id="tohoku"
+        width="50.8"
+        height="106.14"
+        transform="translate(187.4 96)"
+        xlinkHref="#tohoku"
+        onMouseEnter={() => onRegionHover('tohoku')}
+      ></use>
+    </Link>
+    <Link href="/hokkaido">
+      <use
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'hokkaido' ? styles.is_active : ''}`}
+        data-id="hokkaido"
+        width="112.8"
+        height="98.47"
+        transform="translate(192.6)"
+        xlinkHref="#hokkaido"
+        onMouseEnter={() => onRegionHover('hokkaido')}
+      ></use>
+    </Link>
     </svg>
     </>
   )
