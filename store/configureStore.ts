@@ -1,10 +1,12 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import destinationReducer from '../features/placesSlice';
+import regionReducer from 'features/regionSlice';
 
 export const store = configureStore({
     reducer: {
-        data: destinationReducer
+        data: destinationReducer,
+        region: regionReducer,
     }
 })
 

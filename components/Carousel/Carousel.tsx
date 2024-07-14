@@ -3,7 +3,9 @@ import React, { useState, useEffect  } from 'react';
 import { destinations } from "../../data";
 import styles from './Carousel.module.scss';
 import Link from 'next/link';
-
+import { useDispatch, useSelector } from 'react-redux';
+import type { RootState } from '../../store/configureStore'
+import { changeRegion } from 'features/regionSlice';
 // Unhandled Runtime Error
 // TypeError: Cannot read properties of null (reading 'removeChild')
 
@@ -16,14 +18,16 @@ export type DestinationsCartProps = {
   name: string;
   link: string;
   region: string;
+  descriptionHeader: string;
+  descriptionText: string;
 };
 
-interface CarouselProps {
-  activeRegion: string;
-  onRegionChange: (region: string) => void;
-}
 
-const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => {
+export default function Carousel(){
+
+  const activeRegion = useSelector((state: RootState) => state.region.region)
+  const dispatch = useDispatch();
+  
   const [currentIndex, setCurrentIndex] = useState(6);
 
   const nextSlide = () => {
@@ -36,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
 
   // Update region when currentIndex changes
   useEffect(() => {
-    onRegionChange(destinations[currentIndex].region);
+    dispatch(changeRegion(destinations[currentIndex].region))
   }, [currentIndex]);
 
   // Update currentIndex when activeRegion changes
@@ -66,7 +70,7 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
               }}
             >
               <img src={item.img} alt={item.name} className={styles.carouselImage} />
-              {index === currentIndex && <h3>{item.name}</h3>}
+              {index === currentIndex && <p>{item.name}</p>}
             </Link>
           );
         })}
@@ -75,5 +79,3 @@ const Carousel: React.FC<CarouselProps> = ({ activeRegion, onRegionChange }) => 
     </div>
   );
 };
-
-export default Carousel;

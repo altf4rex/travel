@@ -5,6 +5,8 @@ export const destinations = [
       name: 'Okinawa',
       link: '/okinawa',
       region: 'okinawa',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 2,
@@ -12,6 +14,8 @@ export const destinations = [
       name: 'Kyushu',
       link: '/kyushu',
       region: 'kyushu',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 3,
@@ -19,6 +23,8 @@ export const destinations = [
       name: 'Shikoku',
       link: '/shikoku',
       region: 'shikoku',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 4,
@@ -26,6 +32,8 @@ export const destinations = [
       name: 'Chugoku',
       link: '/chugoku',
       region: 'chugoku',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 5,
@@ -33,6 +41,8 @@ export const destinations = [
       name: 'Kansai',
       link: '/kansai',
       region: 'kansai',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 6,
@@ -40,6 +50,8 @@ export const destinations = [
       name: 'Chubu',
       link: '/chubu',
       region: 'chubu',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 7,
@@ -47,6 +59,8 @@ export const destinations = [
       name: 'Kanto',
       link: '/kanto',
       region: 'kanto',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 8,
@@ -54,6 +68,8 @@ export const destinations = [
       name: 'Tohoku',
       link: '/tohoku',
       region: 'tohoku',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     },
     {
       id: 9,
@@ -61,6 +77,8 @@ export const destinations = [
       name: 'Hokkaido',
       link: '/hokkaido',
       region: 'hokkaido',
+      descriptionHeader: "三重県 Mie Prefecture",
+      descriptionText: "Mie Prefecture is a popular tourism destination home to Nagashima Spa Land, Suzuka International Racing Course, and some of the oldest and holiest sites in Shinto, the traditional religion of Japan, including the Ise Grand Shrine and the Tsubaki Grand Shrine.",
     }
   ];
   

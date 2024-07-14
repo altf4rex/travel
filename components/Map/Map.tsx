@@ -1,17 +1,16 @@
+"use client"
 import React from 'react';
 import styles from './Map.module.scss';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/configureStore';
+import { changeRegion } from 'features/regionSlice';
 
-interface MapProps {
-  activeRegion: string;
-  onRegionHover: (region: string) => void;
-}
+export default function Map() {
 
-export default function Map({ activeRegion, onRegionHover }: MapProps) {
-  const regions = [
-    "okinawa", "kyushu", "shikoku", "chugoku", 
-    "kansai", "chubu", "kanto", "tohoku", "hokkaido"
-  ];
+  const activeRegion = useSelector((state: RootState) => state.region.region)
+  const dispatch = useDispatch();
+
   return (
     <>
        <svg className="map__map" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 308.8 338.1">
@@ -146,7 +145,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="85.65"
         transform="translate(214.3 250.7)"
         xlinkHref="#okinawa"
-        onMouseEnter={() => onRegionHover('okinawa')}
+        onMouseEnter={() => dispatch(changeRegion('okinawa'))}
       ></use>
     </Link>
     <Link href="/kyushu">
@@ -157,7 +156,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="92.87"
         transform="translate(0 245.3)"
         xlinkHref="#kyushu"
-        onMouseEnter={() => onRegionHover('kyushu')}
+        onMouseEnter={() => dispatch(changeRegion('kyushu'))}
       ></use>
     </Link>
     <Link href="/shikoku">
@@ -168,7 +167,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="38.45"
         transform="translate(60.1 249.2)"
         xlinkHref="#shikoku"
-        onMouseEnter={() => onRegionHover('shikoku')}
+        onMouseEnter={() => dispatch(changeRegion('shikoku'))}
       ></use>
     </Link>
     <Link href="/chugoku">
@@ -179,7 +178,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="54.85"
         transform="translate(40.6 210.8)"
         xlinkHref="#chugoku"
-        onMouseEnter={() => onRegionHover('chugoku')}
+        onMouseEnter={() => dispatch(changeRegion('chugoku'))}
       ></use>
     </Link>
     <Link href="/kansai">
@@ -190,7 +189,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="48.6"
         transform="translate(100.1 223.7)"
         xlinkHref="#kansai"
-        onMouseEnter={() => onRegionHover('kansai')}
+        onMouseEnter={() => dispatch(changeRegion('kansai'))}
       ></use>
     </Link>
     <Link href="/chubu">
@@ -201,7 +200,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="84.81"
         transform="translate(121.1 164.4)"
         xlinkHref="#chubu"
-        onMouseEnter={() => onRegionHover('chubu')}
+        onMouseEnter={() => dispatch(changeRegion('chubu'))}
       ></use>
     </Link>
     <Link href="/kanto">
@@ -212,7 +211,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="47.88"
         transform="translate(173 195.1)"
         xlinkHref="#kanto"
-        onMouseEnter={() => onRegionHover('kanto')}
+        onMouseEnter={() => dispatch(changeRegion('kanto'))}
       ></use>
     </Link>
     <Link href="/tohoku">
@@ -223,7 +222,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="106.14"
         transform="translate(187.4 96)"
         xlinkHref="#tohoku"
-        onMouseEnter={() => onRegionHover('tohoku')}
+        onMouseEnter={() => dispatch(changeRegion('tohoku'))}
       ></use>
     </Link>
     <Link href="/hokkaido">
@@ -234,7 +233,7 @@ export default function Map({ activeRegion, onRegionHover }: MapProps) {
         height="98.47"
         transform="translate(192.6)"
         xlinkHref="#hokkaido"
-        onMouseEnter={() => onRegionHover('hokkaido')}
+        onMouseEnter={() => dispatch(changeRegion('hokkaido'))}
       ></use>
     </Link>
     </svg>
