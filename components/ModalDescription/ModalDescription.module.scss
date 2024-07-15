@@ -1,3 +1,11 @@
-@import './styles/partials/_variables';
-@import './styles/partials/_mixins';
-@import './styles/partials/_base';
+// @import './styles/partials/_variables';
+// @import './styles/partials/_mixins';
+// @import './styles/partials/_base';
+
+
+.container{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    max-width: 425px;
+}
