@@ -31,7 +31,7 @@ const destinationSlice = createSlice({
             state.loading = 'loading';  // Устанавливаем состояние загрузки
           })
           .addCase(fetchDestination.fulfilled, (state, action: PayloadAction<any>) => {
-            state.destination.push(...action.payload);  // Добавляем данные пользователя в состояние
+            state.destination = action.payload;  // Добавляем данные пользователя в состояние
             state.loading = 'succeeded';  // Устанавливаем состояние успешной загрузки
           })
           .addCase(fetchDestination.rejected, (state, action) => {

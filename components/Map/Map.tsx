@@ -139,7 +139,7 @@ export default function Map() {
   {/* <!-- transparent region overlays for hover effect --> */}
   <Link href="/okinawa">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'okinawa' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Okinawa' ? styles.is_active : ''}`}
         data-id="okinawa"
         width="94.5"
         height="85.65"
@@ -150,7 +150,7 @@ export default function Map() {
     </Link>
     <Link href="/kyushu">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kyushu' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Kyushu' ? styles.is_active : ''}`}
         data-id="kyushu"
         width="61.2"
         height="92.87"
@@ -161,7 +161,7 @@ export default function Map() {
     </Link>
     <Link href="/shikoku">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'shikoku' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Shikoku' ? styles.is_active : ''}`}
         data-id="shikoku"
         width="48.3"
         height="38.45"
@@ -172,7 +172,7 @@ export default function Map() {
     </Link>
     <Link href="/chugoku">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chugoku' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Chugoku' ? styles.is_active : ''}`}
         data-id="chugoku"
         width="63.6"
         height="54.85"
@@ -183,7 +183,7 @@ export default function Map() {
     </Link>
     <Link href="/kansai">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kansai' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Kansai' ? styles.is_active : ''}`}
         data-id="kansai"
         width="46.4"
         height="48.6"
@@ -194,7 +194,7 @@ export default function Map() {
     </Link>
     <Link href="/chubu">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'chubu' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Chubu' ? styles.is_active : ''}`}
         data-id="chubu"
         width="78"
         height="84.81"
@@ -205,7 +205,7 @@ export default function Map() {
     </Link>
     <Link href="/kanto">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'kanto' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Kanto' ? styles.is_active : ''}`}
         data-id="kanto"
         width="43.2"
         height="47.88"
@@ -216,7 +216,7 @@ export default function Map() {
     </Link>
     <Link href="/tohoku">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'tohoku' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Tohoku' ? styles.is_active : ''}`}
         data-id="tohoku"
         width="50.8"
         height="106.14"
@@ -227,7 +227,7 @@ export default function Map() {
     </Link>
     <Link href="/hokkaido">
       <use
-        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'hokkaido' ? styles.is_active : ''}`}
+        className={`${styles.map} ${styles.map__mask} ${activeRegion === 'Hokkaido' ? styles.is_active : ''}`}
         data-id="hokkaido"
         width="112.8"
         height="98.47"

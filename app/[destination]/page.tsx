@@ -14,12 +14,17 @@ export default function Page({ params }: { params: { destination: string } }) {
   // Вызов асинхронного действия при монтировании компонента
   useEffect(() => {
     dispatch(fetchDestination(params.destination));
+    //console.log(params.destination)
   }, [dispatch, params.destination]);
+  
+
+  const nextRegion = useSelector((state: RootState) => state.region.data.nextRegion);
+  const prevRegion = useSelector((state: RootState) => state.region.data.prevRegion);
 
   // Получение данных из состояния и состояния загрузки
   const place = useSelector((state: RootState) => state.destination.destination[0]);
   const loading = useSelector((state: RootState) => state.destination.loading);
-
+  
   // Проверка состояния загрузки и отображение соответствующего контента
   if (loading === 'loading') {
     return <p>Loading...</p>;
@@ -90,7 +95,7 @@ export default function Page({ params }: { params: { destination: string } }) {
           <div className={styles.morePhotos__grid}>
           {
             place.morePhotos.map((m, i) => 
-              <img src={m} alt="" className={styles[`photo-${arr[i]}`]} />
+              <img src={m} alt="" className={styles[`photo-${arr[i]}`]} key={m}/>
             )
           }
           </div>
