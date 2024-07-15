@@ -34,18 +34,18 @@ export const destinations: Destination[] = [
   },
   {
     id: 2,
-    region: 're',
+    region: 'tohoku',
     img: '',
     map: '/Group 70.svg',
-    overview: 'Kanto is a geographical area of Honshu, the largest island of Japan. This region includes the Greater Tokyo Area and encompasses seven prefectures.',
+    overview: 'tohoku is a geographical area of Honshu, the largest island of Japan. This region includes the Greater Tokyo Area and encompasses seven prefectures.',
     topDestinations: [
       {
-        name: 'Tokyo',
+        name: 'tohoku',
         img: '/images/tokyo.jpg', // Replace with your image path or URL
         description: 'Tokyo, the capital of Japan, is a large city known for its modernity and rich history.',
       },
       {
-        name: 'Yokohama',
+        name: 'tohoku',
         img: '/images/yokohama.jpg', // Replace with your image path or URL
         description: 'Yokohama is known for its beautiful waterfront and historic landmarks.',
       },

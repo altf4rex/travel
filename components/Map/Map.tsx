@@ -8,7 +8,7 @@ import { changeRegion } from 'features/regionSlice';
 
 export default function Map() {
 
-  const activeRegion = useSelector((state: RootState) => state.region.region)
+  const activeRegion = useSelector((state: RootState) => state.region.data.region)
   const dispatch = useDispatch();
 
   return (

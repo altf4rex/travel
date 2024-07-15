@@ -5,7 +5,7 @@ import regionReducer from 'features/regionSlice';
 
 export const store = configureStore({
     reducer: {
-        data: destinationReducer,
+        destination: destinationReducer,
         region: regionReducer,
     }
 })

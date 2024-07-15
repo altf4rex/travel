@@ -8,7 +8,7 @@ import { changeRegion } from 'features/regionSlice';
 import type { RootState } from '../../store/configureStore';
 
 export default function Carousel() {
-  const activeRegion = useSelector((state: RootState) => state.region.region);
+  const activeRegion = useSelector((state: RootState) => state.region.data.region);
   const dispatch = useDispatch();
 
   const activeIndex = destinations.findIndex(dest => dest.region === activeRegion);

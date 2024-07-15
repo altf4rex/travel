@@ -5,8 +5,8 @@ import { RootState } from 'store/configureStore'
 import styles from './ModalDescription.module.scss';
 
 export default function ModalDescription() {
-    const descriptionHeader = useSelector((state: RootState) => state.region.descriptionHeader)
-    const descriptionText = useSelector((state: RootState) => state.region.descriptionText)
+    const descriptionHeader = useSelector((state: RootState) => state.region.data.descriptionHeader)
+    const descriptionText = useSelector((state: RootState) => state.region.data.descriptionText)
 
   return (
     <div className={styles.container}>

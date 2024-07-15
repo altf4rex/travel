@@ -6,6 +6,7 @@ import { fetchDestination } from '../../features/placesSlice';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './destinationPage.module.scss';
+import Navigation from '@/components/Navigation/Navigation';
 
 export default function Page({ params }: { params: { destination: string } }) {
   const dispatch: AppDispatch = useDispatch();
@@ -16,8 +17,8 @@ export default function Page({ params }: { params: { destination: string } }) {
   }, [dispatch, params.destination]);
 
   // Получение данных из состояния и состояния загрузки
-  const place = useSelector((state: RootState) => state.data.destination[0]);
-  const loading = useSelector((state: RootState) => state.data.loading);
+  const place = useSelector((state: RootState) => state.destination.destination[0]);
+  const loading = useSelector((state: RootState) => state.destination.loading);
 
   // Проверка состояния загрузки и отображение соответствующего контента
   if (loading === 'loading') {
@@ -95,6 +96,7 @@ export default function Page({ params }: { params: { destination: string } }) {
           </div>
         </section>
       </main>
+      <Navigation />
     </div>
   );
 }
