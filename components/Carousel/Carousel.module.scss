@@ -1,63 +1,63 @@
 .carousel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
   align-items: center;
   position: relative;
-  width: 300px;
-
+  width: 600px;
 }
 
 .carouselContainer {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 100%;
+  width: 400px; 
   height: 400px;
   position: relative;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .carouselItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
   justify-content: center;
   position: absolute;
   width: 100%;
-  transition: transform 2s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .carouselImage {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .prevButton, .nextButton {
+  position: relative;
+  z-index: 10;
   background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  padding: 10px;
   cursor: pointer;
-  position: realative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
 }
 
 .prevButton {
-  top: -60px;
+  bottom: 160px;
 }
 
 .nextButton {
-  bottom: -60px;
+  top: 160px;
 }
 
 .active {
   z-index: 1;
+  transform-origin: left center;
+  transform: scale(1.2);
+}
+
+.textContainer {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }

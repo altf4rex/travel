@@ -40,7 +40,7 @@ export default function Page({ params }: { params: { destination: string } }) {
   
   return (
     <div>
-      <header className={styles.header}>
+      <header className={styles.header} data-testid="header">
         <Image 
           src={place.img}
           alt={place.region}
