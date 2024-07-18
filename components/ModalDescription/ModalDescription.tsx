@@ -9,7 +9,7 @@ export default function ModalDescription() {
     const descriptionText = useSelector((state: RootState) => state.region.data.descriptionText)
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="modal-description">
       <h4>{descriptionHeader}</h4>
       <p>{descriptionText}</p>
     </div>

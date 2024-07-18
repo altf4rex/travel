@@ -15,8 +15,9 @@ const regionSlice = createSlice({
     changeRegion: (state, action: PayloadAction<number>) => {
         state.data = destinations[action.payload];
     },
+    resetRegion: () => initialState
   },
 });
 
-export const { changeRegion } = regionSlice.actions;
+export const { changeRegion, resetRegion  } = regionSlice.actions;
 export default regionSlice.reducer;

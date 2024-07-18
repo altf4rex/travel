@@ -13,7 +13,7 @@ export default function Map() {
 
   return (
     <>
-       <svg className="map__map" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 308.8 338.1">
+       <svg className="map__map" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 308.8 338.1" data-testid="map">
   <defs>
     <symbol id="okinawa" viewBox="0 0 94.5 85.6">
       <path d="M4.4 82.9c-.7-.2-2.4-.8-2.9-.2s.2 2.4-1 1.6c-.4.9-1 .5.2 1.1a4.8 4.8 0 0 0 2.9.1 2.1 2.1 0 0 0 1.1-2c0-.4-.5-1-.3-.6zm7.5-5.2c-1.1.6-.9 2.4-1.8 3.1s-2-.3-2.6.6 2 3.3 3.3 1c.4-.6.3-1.7.5-2.5s1.4-2.7.3-2 .3-.3.3-.2zm16.6-7.1c-1.2-.5-1.3 1.7-.1 1s-.3-1 .1-1zm4.5 1.3c-.8-.4-1.4-.2-2.1-.8s-.5-1.3-1.4-1.4c.9 1.1-.3 2.7 1 3.3s3.9-.5 2.1-1.3l.4.2c-.6-.3-.1-.1 0 0zm14.2-17.8c-.2-.2-.9 1.1-.2 1.3a3.7 3.7 0 0 0 .2-1.3zm-11.3-2.3c-.8-.7-2.1-.4-1.4.6s2.3.8 1.4-.6c.1.2-.6-.5-.4-.3zm7.8-5.8l-.3.5.6-.2c-.1.3-.3-.6-.3-.3zm10.6-3.2c.4 0 .5-.3.4-.7s-1.3.1-1.1.4zm10.4-2.9c.3-.6-1.3-1.5-1.7-1.9.3 1.3-3 4.3-2.4 4.9s-1.4 1.2-2 1 .1-1.3-1.3-1.3c-3 0 .5 2.3.5 3.1S54 47.6 53.6 49s.8 1.8.5 2.8-1.4 1.9-1.7 1.8.5 1.8.5 2.8a3.6 3.6 0 0 0 3.1-2.5c-1.1-.3-1.4-.9-.5-2s1.1-.2 2.2-.8a19.6 19.6 0 0 1-1.6-2.2c-.1-.7.1-.3.9-.8a3.1 3.1 0 0 0 1-.5c.6-.6.9-1.4 1.8-1.8a11.6 11.6 0 0 0 1.5-.6 3.1 3.1 0 0 1 .1-.9 14.6 14.6 0 0 1 1.3-.9c1.6-1.1 1.3-2.4 2-3.5s0-.1 0 0zm1.8-5.9c-.7-.9-1.1.8-.8.8a.7.7 0 0 0 .8-.8zm-9.2 1.2c.1-.4.3-.7.4-1.2a3.4 3.4 0 0 0-1.3 2c.2-.1 1.3-.9.9-.8zM70.5 25c.3.5-3 .9-3.2 1.1s1.8 1.7 1.7.6 1.4-1.8 1.5-1.7zm-9.7-7.8a.5.5 0 0 0-.3-.5c0 .7.4.4.3.5zm15-.3c-.8-.3-.7-2.4-1.7-2.3s-.9 2.6-.7 3.2 1.3 2.1 2.2 1 .4-1.2.2-1.9-.2.4 0 0zm5.4-7.7c-.8.2-1.7-.1-1.2-1s-1.2.3-.8-.4l-.9.2c.2.7 2.6 3.4 3.5 2.1s-.4-.8-.6-.9zm13-6.5l-1.9 1.6c1.2.3 2.5-.2 2.1-1.8l-.5.4.3-.2zM88 1.2c-.2-.2-.3-1.2-.7-1.2s-1.6 3.5-1 .8A4.1 4.1 0 0 0 84.4 3c-.3-.2-.7-.3-.9-.6s-.6 1-1.1.7-2.5 1.7-3.4 2.3a.9.9 0 0 0 1.2.3c-.5 1-2.4.1-2.7 1s2.1 1.1 2.4.3 1 1.9 2.3 2.2a.9.9 0 0 0-.5-.9c.6-.5 1.4-.8 2.1-1.4l-1-.6c.3-.2.8-.6.4-1 1.9-.6 2.4-1.9 3.7-3.1s1.6-.4 1.1-1z"></path>
@@ -65,15 +65,15 @@ export default function Map() {
   </defs>
 {/* 
   <!-- base region areas --> */}
-  <use className="map map--region" width="94.5" height="85.65" transform="translate(214.3 250.7)" xlinkHref="#okinawa"></use>
-  <use className="map map--region" width="61.2" height="92.87" transform="translate(0 245.3)" xlinkHref="#kyushu"></use>
-  <use className="map map--region" width="48.3" height="38.45" transform="translate(60.1 249.2)" xlinkHref="#shikoku"></use>
-  <use className="map map--region" width="63.6" height="54.85" transform="translate(40.6 210.8)" xlinkHref="#chugoku"></use>
-  <use className="map map--region" width="46.4" height="48.6" transform="translate(100.1 223.7)" xlinkHref="#kansai"></use>
-  <use className="map map--region" width="78" height="84.81" transform="translate(121.1 164.4)" xlinkHref="#chubu"></use>
-  <use className="map map--region" width="43.2" height="47.88" transform="translate(173 195.1)" xlinkHref="#kanto"></use>
-  <use className="map map--region" width="50.8" height="106.14" transform="translate(187.4 96)" xlinkHref="#tohoku"></use>
-  <use className="map map--region" width="112.8" height="98.47" transform="translate(192.6)" xlinkHref="#hokkaido"></use>
+  <use className="map map--region" width="94.5" height="85.65" transform="translate(214.3 250.7)" href="#okinawa"></use>
+  <use className="map map--region" width="61.2" height="92.87" transform="translate(0 245.3)" href="#kyushu"></use>
+  <use className="map map--region" width="48.3" height="38.45" transform="translate(60.1 249.2)" href="#shikoku"></use>
+  <use className="map map--region" width="63.6" height="54.85" transform="translate(40.6 210.8)" href="#chugoku"></use>
+  <use className="map map--region" width="46.4" height="48.6" transform="translate(100.1 223.7)" href="#kansai"></use>
+  <use className="map map--region" width="78" height="84.81" transform="translate(121.1 164.4)" href="#chubu"></use>
+  <use className="map map--region" width="43.2" height="47.88" transform="translate(173 195.1)" href="#kanto"></use>
+  <use className="map map--region" width="50.8" height="106.14" transform="translate(187.4 96)" href="#tohoku"></use>
+  <use className="map map--region" width="112.8" height="98.47" transform="translate(192.6)" href="#hokkaido"></use>
 
   {/* <!-- elevation groups --> */}
   <g className="map__elevation map__elevation--1">
@@ -144,7 +144,7 @@ export default function Map() {
         width="94.5"
         height="85.65"
         transform="translate(214.3 250.7)"
-        xlinkHref="#okinawa"
+        href="#okinawa"
         onMouseEnter={() => dispatch(changeRegion(0))}
       ></use>
     </Link>
@@ -155,7 +155,7 @@ export default function Map() {
         width="61.2"
         height="92.87"
         transform="translate(0 245.3)"
-        xlinkHref="#kyushu"
+        href="#kyushu"
         onMouseEnter={() => dispatch(changeRegion(1))}
       ></use>
     </Link>
@@ -166,7 +166,7 @@ export default function Map() {
         width="48.3"
         height="38.45"
         transform="translate(60.1 249.2)"
-        xlinkHref="#shikoku"
+        href="#shikoku"
         onMouseEnter={() => dispatch(changeRegion(2))}
       ></use>
     </Link>
@@ -177,7 +177,7 @@ export default function Map() {
         width="63.6"
         height="54.85"
         transform="translate(40.6 210.8)"
-        xlinkHref="#chugoku"
+        href="#chugoku"
         onMouseEnter={() => dispatch(changeRegion(3))}
       ></use>
     </Link>
@@ -188,7 +188,7 @@ export default function Map() {
         width="46.4"
         height="48.6"
         transform="translate(100.1 223.7)"
-        xlinkHref="#kansai"
+        href="#kansai"
         onMouseEnter={() => dispatch(changeRegion(4))}
       ></use>
     </Link>
@@ -199,7 +199,7 @@ export default function Map() {
         width="78"
         height="84.81"
         transform="translate(121.1 164.4)"
-        xlinkHref="#chubu"
+        href="#chubu"
         onMouseEnter={() => dispatch(changeRegion(5))}
       ></use>
     </Link>
@@ -210,7 +210,7 @@ export default function Map() {
         width="43.2"
         height="47.88"
         transform="translate(173 195.1)"
-        xlinkHref="#kanto"
+        href="#kanto"
         onMouseEnter={() => dispatch(changeRegion(6))}
       ></use>
     </Link>
@@ -221,7 +221,7 @@ export default function Map() {
         width="50.8"
         height="106.14"
         transform="translate(187.4 96)"
-        xlinkHref="#tohoku"
+        href="#tohoku"
         onMouseEnter={() => dispatch(changeRegion(7))}
       ></use>
     </Link>
@@ -232,7 +232,7 @@ export default function Map() {
         width="112.8"
         height="98.47"
         transform="translate(192.6)"
-        xlinkHref="#hokkaido"
+        href="#hokkaido"
         onMouseEnter={() => dispatch(changeRegion(8))}
       ></use>
     </Link>

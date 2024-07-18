@@ -1,0 +1,36 @@
+@import './styles/partials/_variables';
+@import './styles/partials/_mixins';
+
+.container {
+    margin: 320px 0;
+    background: $secondary-bg-color;
+    border-top: 1px dashed $primary-border-color;
+    border-bottom: 1px dashed $primary-border-color;
+
+    nav {
+        max-width: 888px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            @include button-styles($secondary-border-color)
+        }
+    }
+}
+
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70.5px 0px;
+  }
+
+  .nav__containerLeftImg{
+    margin-right: 100px;
+  }
+
+  .nav__containerRightImg{
+    margin-left: 100px;
+  }

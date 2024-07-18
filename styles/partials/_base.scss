@@ -23,39 +23,40 @@ body {
 }
 
 h1 {
-  @include heading-styles($h1-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h1-font-size, $heading-font-weight);
 }
 
 h2 {
-  @include heading-styles($h2-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h2-font-size, $heading-font-weight);
 }
 
 h3 {
-  @include heading-styles($h3-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h3-font-size, $heading-font-weight);
 }
 
 h4 {
-  @include heading-styles($h4-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h4-font-size, $heading-font-weight);
 }
 
 h5 {
-  @include heading-styles($h5-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h5-font-size, $heading-font-weight);
 }
 
 h6 {
-  @include heading-styles($h6-font-size, $heading-line-height, $heading-font-weight);
+  @include heading-styles($h6-font-size, $heading-font-weight);
 }
 
 p {
-  font-size: $body-font-size;
+  font-size: $small-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $primary-text-color;
 }
 
-small {
-  font-size: $small-font-size;
-  color: $secondary-text-color;
-}
+// small {
+//   font-size: $small-font-size;
+//   color: $secondary-text-color;
+// }
 
 a {
   color: $primary-text-color;
@@ -93,12 +94,12 @@ button {
 }
 
 // Utility Classes for Main Text and More
-.main-text {
-  font-size: $body-font-size;
-  color: $primary-text-color;
-}
+// .main-text {
+//   font-size: $body-font-size;
+//   color: $primary-text-color;
+// }
 
-.sub-text {
-  font-size: $small-font-size;
-  color: $secondary-text-color;
-}
+// .sub-text {
+//   font-size: $small-font-size;
+//   color: $secondary-text-color;
+// }

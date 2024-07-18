@@ -1,8 +1,20 @@
 @import './_variables';
 
-@mixin heading-styles($size, $line-height, $weight) {
+@mixin heading-styles($size, $weight) {
     font-size: $size;
-    line-height: $line-height;
     font-weight: $weight;
     color: $primary-text-color;
+  }
+
+@mixin button-styles($border-color) {
+    padding: 10px 20px;
+    font-size: $body-font-size;
+    font-weight: bold;
+    border: 1px solid $border-color;
+    color: $primary-text-color;
+    &:hover {
+      background-color: $button-hover-bg-color;
+      color: $button-hover-text-color;
+      border-color: $primary-border-hover-color;
+    }
   }

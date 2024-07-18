@@ -1,8 +1,8 @@
 'use client';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../store/configureStore';
-import { fetchDestination } from '../../features/placesSlice';
+import { RootState, AppDispatch } from '../../../store/configureStore';
+import { fetchDestination } from '../../../features/placesSlice';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './destinationPage.module.scss';

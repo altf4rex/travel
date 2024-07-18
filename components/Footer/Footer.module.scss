@@ -1,0 +1,13 @@
+@import './styles/partials/_variables';
+@import './styles/partials/_mixins';
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 72px;
+}
+
+.footer__button {
+    @include button-styles($primary-border-color)
+}

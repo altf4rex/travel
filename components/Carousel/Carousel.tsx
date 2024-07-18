@@ -24,8 +24,8 @@ export default function Carousel() {
   };
 
   return (
-    <div className={styles.carousel}>
-      <button onClick={prevSlide} className={styles.prevButton}>Up</button>
+    <div className={styles.carousel} data-testid="carousel">
+      <button onClick={prevSlide} className={styles.prevButton} aria-label="Previous slide">Up</button>
       <div className={styles.carouselContainer}>
         {destinations.map((item, index) => {
           const position = index - activeIndex;
@@ -33,6 +33,7 @@ export default function Carousel() {
             <Link
               href={item.link}
               key={item.id}
+              data-testid={item.name}
               className={`${styles.carouselItem} ${index === activeIndex ? styles.active : ''}`}
               style={{
                 transform: `translateY(${position * 120}%) scale(${index === activeIndex ? 1 : 0.8})`,
@@ -47,7 +48,7 @@ export default function Carousel() {
           );
         })}
       </div>
-      <button onClick={nextSlide} className={styles.nextButton}>Down</button>
+      <button onClick={nextSlide} className={styles.nextButton} aria-label="Next slide">Down</button>
     </div>
   );
 }
