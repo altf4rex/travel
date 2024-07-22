@@ -16,7 +16,8 @@ interface UserState {
 export const fetchDestination = createAsyncThunk(
     'destination/fetchDestination',
     async (destination: string) => {
-        const data = await fakeFetchDestination(destination);
+        // const data = await fakeFetchDestination(destination);
+        const data = await fetch(`/api/destination/${destination}`);
         return data
     }
 )
