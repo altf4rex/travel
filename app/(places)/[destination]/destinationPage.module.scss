@@ -3,13 +3,22 @@
     position: relative;
     height: fit-content;
     img {
-        position: relative;
-        z-index: 1;
-        max-width: 1920px;
-        max-height: 580px;
-        object-fit: cover;
-        object-position: 50% 83%; /* Центр по горизонтали и низ по вертикали */
-    }
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      max-height: 580px;
+      object-fit: cover;
+      object-position: 50% 83%; /* Центр по горизонтали и низ по вертикали */
+
+      @media (max-width: 600px) {
+          max-height: 100%; 
+          object-position: 50% 50%;
+      }
+  }
+
+  @media (max-width: 600px) {
+    height: 100vh; 
+}
 
     a, h1 {
         position: absolute;
@@ -26,6 +35,30 @@
         font-size: $h1-font-size;
         background: $primary-bg-color;
     }
+}
+
+
+.overviewDescription{
+  display: flex;
+  justify-content: space-between;
+
+  div{
+    max-width: 928px;
+  }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}
+
+.overviewDestination{
+  display: flex;
+  flex-wrap: wrap;
+  img{
+    max-width: 100%;
+    object-fit: contain;
+  }
+
 }
 
 .morePhotos{

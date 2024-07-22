@@ -71,6 +71,6 @@ export const fakeFetchDestination = async (destination: string): Promise<Destina
   return new Promise((resolve) => {
     setTimeout(() => {
         resolve(destinations.filter(a => destination === a.region));
-    }, 300); 
+    }, 100); 
   });
 };

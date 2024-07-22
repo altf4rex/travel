@@ -18,8 +18,8 @@ export default function Page({ params }: { params: { destination: string } }) {
   }, [dispatch, params.destination]);
   
 
-  const nextRegion = useSelector((state: RootState) => state.region.data.nextRegion);
-  const prevRegion = useSelector((state: RootState) => state.region.data.prevRegion);
+  // const nextRegion = useSelector((state: RootState) => state.region.data.nextRegion);
+  // const prevRegion = useSelector((state: RootState) => state.region.data.prevRegion);
 
   // Получение данных из состояния и состояния загрузки
   const place = useSelector((state: RootState) => state.destination.destination[0]);
@@ -58,8 +58,8 @@ export default function Page({ params }: { params: { destination: string } }) {
         </h1>
       </header>
       <main>
-        <section>
-          <div>
+        <section className={styles.overview}>
+          <div className={styles.overviewDescription}>
             <div>
               <h3>Overview</h3>
               <p>{place.overview}</p>
@@ -71,10 +71,10 @@ export default function Page({ params }: { params: { destination: string } }) {
               height={399}
             />
           </div>
-          <div>
+          <div className={styles.overviewDestinations}>
             {
               place.topDestinations.map((d) => 
-                <div key={d.name}>
+                <div key={d.name} className={styles.overviewDestination}>
                   <Image 
                     src={d.img}
                     alt={d.name}
