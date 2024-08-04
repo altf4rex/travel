@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Пример данных, которые вы хотите вернуть
 const destinations = [
   {
     id: 1,
@@ -11,17 +10,17 @@ const destinations = [
     topDestinations: [
       {
         name: 'Tokyo',
-        img: '/todaiji-temple 1.jpg', // Replace with your image path or URL
+        img: '/todaiji-temple 1.jpg',
         description: 'Tokyo, the capital of Japan, is a large city known for its modernity and rich history.',
       },
       {
         name: 'Yokohama',
-        img: '/park 1.jpg', // Replace with your image path or URL
+        img: '/park 1.jpg', 
         description: 'Yokohama is known for its beautiful waterfront and historic landmarks.',
       },
       {
         name: 'Kawasaki',
-        img: '/museum 1.png', // Replace with your image path or URL
+        img: '/museum 1.png', 
         description: 'Kawasaki is a city known for its industrial area and cultural sites.',
       },
     ],
@@ -42,17 +41,17 @@ const destinations = [
     topDestinations: [
       {
         name: 'Tohoku',
-        img: '/images/tokyo.jpg', // Replace with your image path or URL
+        img: '/images/tokyo.jpg', 
         description: 'Tokyo, the capital of Japan, is a large city known for its modernity and rich history.',
       },
       {
         name: 'Tohoku',
-        img: '/images/yokohama.jpg', // Replace with your image path or URL
+        img: '/images/yokohama.jpg',
         description: 'Yokohama is known for its beautiful waterfront and historic landmarks.',
       },
       {
         name: 'Kawasaki',
-        img: '/images/kawasaki.jpg', // Replace with your image path or URL
+        img: '/images/kawasaki.jpg',
         description: 'Kawasaki is a city known for its industrial area and cultural sites.',
       },
     ],
@@ -80,14 +79,14 @@ export async function GET(request: NextRequest) {
 
 //   return Response.json({ data });
 
-const { searchParams } = new URL(request.url);
-const region = searchParams.get('region');
+  const { searchParams } = new URL(request.url);
+  const region = searchParams.get('region');
 
-const destination = destinations.find(dest => dest.region === region);
+  const destination = destinations.find(dest => dest.region.toLowerCase() === region?.toLowerCase());
 
-if (destination) {
-  return NextResponse.json(destination);
-} else {
-  return new NextResponse('Destination not found', { status: 404 });
-}
+  if (destination) {
+    return NextResponse.json(destination);
+  } else {
+    return new NextResponse('Destination not found', { status: 404 });
+  }
 }

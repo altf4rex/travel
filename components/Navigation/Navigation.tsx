@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "store/configureStore";

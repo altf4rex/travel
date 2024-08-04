@@ -1,5 +1,5 @@
 // 'use client';
-// import { useEffect } from 'react';
+// import { useEffect, useState } from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { RootState, AppDispatch } from '../../../store/configureStore';
 // import { fetchDestination } from '../../../features/placesSlice';
@@ -10,19 +10,16 @@ import Navigation from '@/components/Navigation/Navigation';
 import { Destination } from 'types';
 
 export default async function Page({ params }: { params: { destination: string } }) {
-
-  
-  
-  const data = await fetch(`http://localhost:3000/api/destination?id=${params.destination}`);
-  const place: Destination = await data.json();
   const arr = ["a", "b", "c", "d", "e"];
+  
+  const response = await fetch(`http://localhost:3000/api/destination?region=${params.destination}`);
+  if (!response.ok) {
+    return <p>No data available</p>;
+  }
+  const place: Destination = await response.json();
 
   // const nextRegion = useSelector((state: RootState) => state.region.data.nextRegion);
   // const prevRegion = useSelector((state: RootState) => state.region.data.prevRegion);
-
-  if (!place) {
-    return <p>No data available</p>;
-  }
   
   return (
     <div>
