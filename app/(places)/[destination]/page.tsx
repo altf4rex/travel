@@ -1,38 +1,24 @@
-'use client';
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../../store/configureStore';
-import { fetchDestination } from '../../../features/placesSlice';
+// 'use client';
+// import { useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { RootState, AppDispatch } from '../../../store/configureStore';
+// import { fetchDestination } from '../../../features/placesSlice';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './destinationPage.module.scss';
 import Navigation from '@/components/Navigation/Navigation';
+import { Destination } from 'types';
 
-export default function Page({ params }: { params: { destination: string } }) {
-  const dispatch: AppDispatch = useDispatch();
-  const arr = ["a", "b", "c", "d", "e",]
-  // Вызов асинхронного действия при монтировании компонента
-  useEffect(() => {
-    dispatch(fetchDestination(params.destination));
-    //console.log(params.destination)
-  }, [dispatch, params.destination]);
+export default async function Page({ params }: { params: { destination: string } }) {
+
   
+  
+  const data = await fetch(`http://localhost:3000/api/destination?id=${params.destination}`);
+  const place: Destination = await data.json();
+  const arr = ["a", "b", "c", "d", "e"];
 
   // const nextRegion = useSelector((state: RootState) => state.region.data.nextRegion);
   // const prevRegion = useSelector((state: RootState) => state.region.data.prevRegion);
-
-  // Получение данных из состояния и состояния загрузки
-  const place = useSelector((state: RootState) => state.destination.destination[0]);
-  const loading = useSelector((state: RootState) => state.destination.loading);
-  
-  // Проверка состояния загрузки и отображение соответствующего контента
-  if (loading === 'loading') {
-    return <p>Loading...</p>;
-  }
-
-  if (loading === 'failed') {
-    return <p>Error loading data</p>;
-  }
 
   if (!place) {
     return <p>No data available</p>;
